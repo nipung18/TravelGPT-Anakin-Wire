@@ -77,7 +77,7 @@ function App() {
         message: `Planning a ${days}-day trip to ${destination} with style: ${style}`
       }]);
 
-      const response = await axios.post("http://localhost:5005/generate-trip", {
+      const response = await axios.post("https://travelgpt-anakin-wire.onrender.com/generate-trip", {
         fromCity,
         destination,
         budget,
@@ -100,7 +100,7 @@ function App() {
           timestamp: new Date().toLocaleTimeString(),
           step: "Connection Failed",
           status: "ERROR",
-          message: "Could not reach backend server at http://localhost:5005"
+          message: "Could not reach backend server at https://travelgpt-anakin-wire.onrender.com"
         }
       ]);
     } finally {
